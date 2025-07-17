@@ -23,6 +23,9 @@ switch (model)
     case 'RollingSpider'
         Vehicle.Airframe.mass = 0.068;
         Vehicle.Airframe.inertia = diag([0.0686e-3 0.092e-3 0.1366e-3]);
+    case 'Crane'  % To be updated
+        Vehicle.Airframe.mass = 0.068;
+        Vehicle.Airframe.inertia = diag([0.0686e-3 0.092e-3 0.1366e-3]);
 end
 Vehicle.Airframe.d = 0.0624;
 Vehicle.Airframe.xy = Vehicle.Airframe.d*sqrt(2)/2; % For diamond rotor set-up

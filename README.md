@@ -25,3 +25,23 @@ Upon opening, two key scripts will run automatically:
 - `mainModels/asbQuadcopter.slx` Launches the core Simulink model of the quadcopter.
 
 <img width="2262" height="1139" alt="image" src="https://github.com/user-attachments/assets/a0b8640a-d245-4d45-90fb-f93ec0b5e441" />
+
+---
+# Vehicle-specific parameters: `tasks\vehicleVars.m`
+
+https://github.com/komxun/CraneStage2/blob/24e7c2b3a0cd5435308e502655355debf9bb1ace/CraneQuadcopter/tasks/vehicleVars.m#L17-L64
+
+# Sensors-related parameters: `tasks\sensorsVars.m`
+
+https://github.com/komxun/CraneStage2/blob/24e7c2b3a0cd5435308e502655355debf9bb1ace/CraneQuadcopter/tasks/sensorsVars.m#L7-L65
+
+# Simulation-related parameters: `startVars.m`
+
+https://github.com/komxun/CraneStage2/blob/24e7c2b3a0cd5435308e502655355debf9bb1ace/CraneQuadcopter/utilities/startVars.m#L26-L77
+
+
+
+
+
+
+

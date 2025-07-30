@@ -29,24 +29,24 @@ switch (model)
 end
 
 if string(model) == "Crane"
-    Vehicle.Airframe.d = 0.0624;   % Arm length [m]
+    Vehicle.Airframe.d = 0.0624;
     Vehicle.Airframe.xy = Vehicle.Airframe.d*sqrt(2)/2; % For diamond rotor set-up
-    Vehicle.Airframe.h = -0.015876;  % Height [m]
+    Vehicle.Airframe.h = -0.015876;
     Vehicle.Airframe.Cdx = 0;
     Vehicle.Airframe.Cdy = 0;
     Vehicle.Airframe.diameter = .01; % For drag calculation purposes
     % Rotor
-    Vehicle.Rotor.blades = 2;        % Checked
-    Vehicle.Rotor.radius = 1.854/2;  % Checked
+    Vehicle.Rotor.blades = ;
+    Vehicle.Rotor.radius = 0.033;
     Vehicle.Rotor.chord = .008;
-    Vehicle.Rotor.flappingOffset = 0;  % Hinge offset
-    Vehicle.Rotor.bladeMass = 1.75;   % [kg] Checked
+    Vehicle.Rotor.flappingOffset = 0;
+    Vehicle.Rotor.bladeMass = 3.75e-04;
     Vehicle.Rotor.bladeInertia = Vehicle.Rotor.bladeMass*Vehicle.Rotor.radius^2/4;
     Vehicle.Rotor.hubMass = 0;
     Vehicle.Rotor.hubInertia = 0;
     Vehicle.Rotor.inertia = Vehicle.Rotor.hubInertia + Vehicle.Rotor.bladeInertia;
-    Vehicle.Rotor.Ct = .0107;  % Thrust coefficient (CT)
-    Vehicle.Rotor.Cq = Vehicle.Rotor.Ct*sqrt(Vehicle.Rotor.Ct/2);  % Torque coefficient (CQ)
+    Vehicle.Rotor.Ct = .0107;
+    Vehicle.Rotor.Cq = Vehicle.Rotor.Ct*sqrt(Vehicle.Rotor.Ct/2);
     Vehicle.Rotor.solidity = Vehicle.Rotor.chord*Vehicle.Rotor.blades/(pi*Vehicle.Rotor.radius);
     Vehicle.Rotor.theta0 = 14.6*(pi/180);
     Vehicle.Rotor.thetaTip = 6.8*(pi/180);
@@ -62,10 +62,9 @@ if string(model) == "Crane"
     % Motors
     Vehicle.Motor.maxLimit = 500;
     Vehicle.Motor.minLimit = 10;
-    Vehicle.Motor.commandToW2Gain = 13840.8; % motor command for Rolling Spider (0-500) to motorspeed^2
+    Vehicle.Motor.commandToW2Gain = 13840.8; %motor command for Rolling Spider (0-500) to motorspeed^2
     Vehicle.Motor.thrustToMotorCommand = 1/(Vehicle.Rotor.w2ToThrustGain*Vehicle.Motor.commandToW2Gain);
-
-else  % ==== Ignore this part (only an example from Parrot drone) =====
+else
     Vehicle.Airframe.d = 0.0624;
     Vehicle.Airframe.xy = Vehicle.Airframe.d*sqrt(2)/2; % For diamond rotor set-up
     Vehicle.Airframe.h = -0.015876;

@@ -56,8 +56,8 @@ g = 9.81;
 
 % Variables
 % Load MAT file with model for persistence
-load('modelCrane');
-% load('modelParrot')
+% load('modelCrane');
+load('modelParrot')
 % Obtain vehicle variables
 vehicleVars;
 % Obtain sensor variables

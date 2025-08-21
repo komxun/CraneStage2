@@ -25,6 +25,7 @@ asbEnumDefinition;
 
 % Sampling rate
 Ts= 0.005;   % Flight Control System sample rate
+% Ts = 0.0025;
 VTs = 40*Ts; % Image processing sampling rate
 
 % Simulation time
